@@ -21,14 +21,14 @@ platform=$1
 path_to_vm_packs=$2
 path_to_existing_jre=$3
 vm_pack_name=$4
-
+y
 clean_up() {
   rm -f $TEMP
 }
 
 err_msg() {
   echo "$@" 1>&2
-  exit
+  exit 1
 }
 
 init() {
@@ -102,7 +102,7 @@ vm_pack_prep() {
 
 clean_up_exit() {
 	rm -f $TEMP
-	exit 1
+	exit 0
 }
 
 jre_copied() {
@@ -164,7 +164,7 @@ buildvm_linux() {
 if [ $# -ne 4 ]
 then
 	echo "Usage: vmpackcreator <platform> <destination dir> <path to existing JRE> <filename of VM pack>"
-	exit 0
+	exit 1
 fi
 
 
