@@ -1,18 +1,15 @@
-# createvmpackage
+# vmpackcreator
 
 ## About
 
 Creates Install Anywhere VM packages (.vm) for Windows, Linux and OSX.
 
-## Download
-
-
 ## Usage
 
-Invoking createvmpackage from the command line may look like this:
+Invoking vmpackcreator from the command line may look like this:
 
 ```bash
-createvmpackage <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"  
+vmpackcreator <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"  
 ```
 | Parameter | Meaning |
 | --- | --- |
@@ -20,7 +17,6 @@ createvmpackage <plaform> <destination dir> <path to existing JRE> <filename of 
 | destination dir | directory where the VM packs will be created |
 | path to existing JRE | directory where a JRE exists for bundling into VM pack |
 | filename of VM pack | the filename (YOURNAME.vm) of the final VM pack |
-
 
 ## Limitations
 
@@ -34,4 +30,3 @@ The code is licensed under the [Apache 2 license](http://www.apache.org/licenses
 
 Distributing a bundled JVM has security implications, just like bundling any other runtimes like Mono, Air, etc. 
 Make sure you understand the implications before deciding to use this tool.
-
