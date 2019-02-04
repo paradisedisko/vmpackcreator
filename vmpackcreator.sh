@@ -6,7 +6,7 @@ VERSION="1.0"
 
 TEMP="./VMPACKBUILDER_TEMP"
 
-final_property_file_name=vm.properties
+final_property_file_name=$SCRIPT_DIR/vm.properties
 windows_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.win`
 linux_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.lin`
 osx_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.osx`
@@ -174,10 +174,6 @@ echo "Platform: $platform"
 echo "JRE path: $path_to_existing_jre"
 echo "VM path: $path_to_vm_packs"
 echo "VM name : $vm_pack_name"
-
-echo $SCRIPT_DIR
-
-echo $windows_property_file
 
 init
 
