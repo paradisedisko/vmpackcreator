@@ -12,8 +12,15 @@ Creates Install Anywhere VM packages (.vm) for Windows, Linux and OSX.
 Invoking createvmpackage from the command line may look like this:
 
 ```bash
-createvmpackage <Windows  
+createvmpackage <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"  
 ```
+| Parameter | Meaning |
+| --- | --- |
+| platform | one of "Windows", "Linux", "OSX" |
+| destination dir | directory where the VM packs will be created |
+| path to existing JRE | directory where a JRE exists for bundling into VM pack |
+| filename of VM pack | the filename (YOURNAME.vm) of the final VM pack |
+
 
 ## Limitations
 
