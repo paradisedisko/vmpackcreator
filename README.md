@@ -9,7 +9,7 @@ Creates Install Anywhere VM packages (.vm) for Windows, Linux and OSX.
 Invoking vmpackcreator from the command line may look like this:
 
 ```bash
-vmpackcreator <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"  
+vmpackcreator <platform> <destination dir> <path to existing JRE> <filename of VM pack>"  
 ```
 | Parameter | Meaning |
 | --- | --- |
