@@ -1,13 +1,15 @@
 #!/bin/sh
 
+SCRIPT_DIR=$(dirname "$0")
+
 VERSION="1.0"
 
 TEMP="./VMPACKBUILDER_TEMP"
 
 final_property_file_name=vm.properties
-windows_property_file=`./rel2abspath vm.prop.win`
-linux_property_file=`./rel2abspath vm.prop.lin`
-osx_property_file=`./rel2abspath vm.prop.osx`
+windows_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.win`
+linux_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.lin`
+osx_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.osx`
 
 WINDOWS="Windows"
 LINUX="Linux"
@@ -30,9 +32,9 @@ err_msg() {
 }
 
 init() {
-    path_to_vm_packs=`./rel2abspath $path_to_vm_packs`
+    path_to_vm_packs=`$SCRIPT_DIR/rel2abspath $path_to_vm_packs`
 	path_to_vm_packs="$path_to_vm_packs"/
-	path_to_existing_jre=`./rel2abspath $path_to_existing_jre`
+	path_to_existing_jre=`$SCRIPT_DIR/rel2abspath $path_to_existing_jre`
 	path_to_existing_jre="$path_to_existing_jre"/
 
 	if [ ! -d $path_to_vm_packs ]
@@ -161,7 +163,7 @@ buildvm_linux() {
 
 if [ $# -ne 4 ]
 then
-	echo "Usage: vmpackcreator <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"
+	echo "Usage: vmpackcreator <platform> <destination dir> <path to existing JRE> <filename of VM pack>"
 	exit 0
 fi
 
@@ -172,6 +174,10 @@ echo "Platform: $platform"
 echo "JRE path: $path_to_existing_jre"
 echo "VM path: $path_to_vm_packs"
 echo "VM name : $vm_pack_name"
+
+echo $SCRIPT_DIR
+
+echo $windows_property_file
 
 init
 
