@@ -21,7 +21,7 @@ platform=$1
 path_to_vm_packs=$2
 path_to_existing_jre=$3
 vm_pack_name=$4
-y
+
 clean_up() {
   rm -f $TEMP
 }
