@@ -1,0 +1,14 @@
+#!/bin/bash
+# This Script converts relative into absolute pathnames
+
+if [ $# -ne 1 ]
+then
+	echo "Usage: rel2abspath <relative_path>"
+	exit 0
+fi
+
+D=`dirname "$1"`
+B=`basename "$1"`
+abspath="`cd \"$D\" && pwd || echo \"$D\"`/$B"
+
+echo $abspath

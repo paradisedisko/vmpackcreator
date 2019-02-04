@@ -1,0 +1,4 @@
+vm.name=OpenJDK11_windows(x64)
+vm.platform=windows
+vm.exe.path=bin\\java.exe
+vm.platform.flavor=win64

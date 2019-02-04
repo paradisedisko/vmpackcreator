@@ -1,0 +1,4 @@
+vm.name=OpenJDK11_macosx
+vm.platform=mac-osx
+vm.platform.flavor=mac
+vm.exe.path=Contents/Home/bin/java

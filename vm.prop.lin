@@ -1,0 +1,4 @@
+vm.name=OpenJDK11_Linux64
+vm.platform=unix
+vm.exe.path=bin/java
+vm.platform.flavor=Linux
