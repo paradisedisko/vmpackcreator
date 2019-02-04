@@ -1,5 +1,7 @@
 #!/bin/sh
 
+VERSION="1.0"
+
 TEMP="./VMPACKBUILDER_TEMP"
 
 final_property_file_name=vm.properties
@@ -159,12 +161,12 @@ buildvm_linux() {
 
 if [ $# -ne 4 ]
 then
-	echo "Usage: create-vm-package <Windows || Linux> <path to destination VM packs> <path to existing JRE> <name of VM pack>"
+	echo "Usage: vmpackcreator <plaform> <destination dir> <path to existing JRE> <filename of VM pack>"
 	exit 0
 fi
 
 
-echo "VM Packer 1.0"
+echo "VM Pack Creator $VERSION"
 echo "...using the following parameters:"
 echo "Platform: $platform"
 echo "JRE path: $path_to_existing_jre"
