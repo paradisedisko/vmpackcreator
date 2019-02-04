@@ -6,7 +6,7 @@ VERSION="1.0"
 
 TEMP="./VMPACKBUILDER_TEMP"
 
-final_property_file_name=$SCRIPT_DIR/vm.properties
+final_property_file_name=vm.properties
 windows_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.win`
 linux_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.lin`
 osx_property_file=`$SCRIPT_DIR/rel2abspath $SCRIPT_DIR/vm.prop.osx`
@@ -154,7 +154,7 @@ buildvm_linux() {
         } > $TEMP
 
      else
-        err_msg " vm.properties and vm.zip needed but not found! Aborting..."
+        err_msg "vm.properties and vm.zip needed but not found! Aborting..."
      fi
 
     operation_done
